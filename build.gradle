@@ -136,6 +136,26 @@ tasks.withType(JavaCompile) {
     options.compilerArgs.add '-XDstringConcat=inline'
 }
 
+// // Check robot type when deploying
+// task(checkConfigDeploy, dependsOn: "classes", type: JavaExec) {
+//     mainClass = "frc.robot.Constants\$CheckDeploy"
+//     classpath = sourceSets.main.runtimeClasspath
+// }
+// deployroborio.dependsOn(checkConfigDeploy)
+
+// // Check robot type when simulating
+// task(checkConfigSim, dependsOn: "classes", type: JavaExec) {
+//     mainClass = "frc.robot.Constants\$CheckSim"
+//     classpath = sourceSets.main.runtimeClasspath
+// }
+// simulateJava.dependsOn(checkConfigSim)
+
+// // Check config for pull request
+// task(checkConfigPullRequest, dependsOn: "classes", type: JavaExec) {
+//     mainClass = "frc.robot.Constants\$CheckPullRequest"
+//     classpath = sourceSets.main.runtimeClasspath
+// }
+
 idea {
     project {
         // The project.sourceCompatibility setting is not always picked up, so we set explicitly
